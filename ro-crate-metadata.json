@@ -1,0 +1,122 @@
+{
+    "@context": [
+        "https://w3id.org/ro/crate/1.1/context",
+        {
+            "GithubService": "https://w3id.org/ro/terms/test#GithubService",
+            "JenkinsService": "https://w3id.org/ro/terms/test#JenkinsService",
+            "PlanemoEngine": "https://w3id.org/ro/terms/test#PlanemoEngine",
+            "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
+            "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
+            "TestService": "https://w3id.org/ro/terms/test#TestService",
+            "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
+            "TravisService": "https://w3id.org/ro/terms/test#TravisService",
+            "definition": "https://w3id.org/ro/terms/test#definition",
+            "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
+            "instance": "https://w3id.org/ro/terms/test#instance",
+            "resource": "https://w3id.org/ro/terms/test#resource",
+            "runsOn": "https://w3id.org/ro/terms/test#runsOn"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2025-03-14T08:56:53+00:00",
+            "hasPart": [
+                {
+                    "@id": "workflow"
+                },
+                {
+                    "@id": "README.md"
+                }
+            ],
+            "isBasedOn": "https://github.com/lifemonitor/workflow-tests",
+            "license": "MIT",
+            "mainEntity": {
+                "@id": "workflow"
+            },
+            "mentions": [
+                {
+                    "@id": "#31dce3c7-fa6f-48ff-8168-b31ed8c28cb7"
+                }
+            ],
+            "name": "MyWorkflow"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/crate/1.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ]
+        },
+        {
+            "@id": "workflow",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "name": "MyWorkflow",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake"
+            },
+            "url": "https://github.com/kikkomep/myworkflow",
+            "version": "main"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake",
+            "@type": "ComputerLanguage",
+            "identifier": {
+                "@id": "https://doi.org/10.1093/bioinformatics/bts480"
+            },
+            "name": "Snakemake",
+            "url": {
+                "@id": "https://snakemake.readthedocs.io"
+            },
+            "version": "6.5.0"
+        },
+        {
+            "@id": "#31dce3c7-fa6f-48ff-8168-b31ed8c28cb7",
+            "@type": "TestSuite",
+            "instance": [
+                {
+                    "@id": "#1b975dea-706c-48e1-a813-efd327c711a7"
+                }
+            ],
+            "mainEntity": {
+                "@id": "workflow"
+            },
+            "name": "Test suite for MyWorkflow"
+        },
+        {
+            "@id": "#1b975dea-706c-48e1-a813-efd327c711a7",
+            "@type": "TestInstance",
+            "name": "GitHub Actions workflow for testing MyWorkflow",
+            "resource": "repos/lifemonitor/workflow-tests/actions/workflows/main.yml",
+            "runsOn": {
+                "@id": "https://w3id.org/ro/terms/test#GithubService"
+            },
+            "url": "https://api.github.com"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/test#GithubService",
+            "@type": "TestService",
+            "name": "Github Actions",
+            "url": {
+                "@id": "https://github.com"
+            }
+        },
+        {
+            "@id": "README.md",
+            "@type": "File"
+        }
+    ]
+}
