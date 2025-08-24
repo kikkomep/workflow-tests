@@ -30,7 +30,7 @@
                     "@id": "README.md"
                 }
             ],
-            "isBasedOn": "https://github.com/lifemonitor/workflow-tests",
+            "isBasedOn": "https://github.com/kikkomep/workflow-tests",
             "license": "MIT",
             "mainEntity": {
                 "@id": "workflow"
@@ -100,7 +100,7 @@
             "@id": "#1b975dea-706c-48e1-a813-efd327c711a7",
             "@type": "TestInstance",
             "name": "GitHub Actions workflow for testing MyWorkflow",
-            "resource": "repos/lifemonitor/workflow-tests/actions/workflows/main.yml",
+            "resource": "repos/kikkomep/workflow-tests/actions/workflows/main.yml",
             "runsOn": {
                 "@id": "https://w3id.org/ro/terms/test#GithubService"
             },
